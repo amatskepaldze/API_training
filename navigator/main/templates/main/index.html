@@ -1,0 +1,129 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+    <script src="tools.js"></script>
+    <title>videoanalytics</title>
+</head>
+<body>
+  <div class="pos-f-t">
+    <div class="collapse" id="navbarToggleExternalContent">
+      <div class="bg-dark p-4">
+        <h5 class="text-white h4">Collapsed content</h5>
+        <span class="text-muted">Toggleable via the navbar brand.</span>
+      </div>
+    </div>
+    <nav class="navbar navbar-dark bg-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse"
+              data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+  </div>
+  <div>
+    <H1 class="page_name">VideoAnalytics</H1>
+    <br>
+    <br>
+
+    <div class="scroll", style="width: auto; max-height: 400px">
+      <input class="form-control" type="text" placeholder="Поиск по параметру" id="search-text" onkeyup="tableSearch()">
+      <table class="main_table" id="info-table">
+        <tr>
+          <th>RouteID</th>
+          <th>Departure</th>
+          <th>Arrive</th>
+          <th>Date</th>
+          <th>CarNumber</th>
+          <th>OnStation</th>
+        </tr>
+        <tr>
+          <td><a href="current_route/001">{{ routes.id }}</a></td>
+          <td>{{ routes.start_point }}</td>
+          <td>Vladimir</td>
+          <td>2023-05-14</td>
+          <td>{{ routes.car_number }}.</td>
+          <td>False</td>
+        </tr>
+        <tr>
+          <td><a href="current_route/002">002</a></td>
+          <td>Moscow</td>
+          <td>Yaroslavl</td>
+          <td>2023-05-13</td>
+          <td>E001KX</td>
+          <td>False</td>
+        </tr>
+          <tr>
+          <td><a href="current_route/003">003</a></td>
+          <td>SPB</td>
+          <td>Saratov</td>
+          <td> </td>
+          <td>A123MO</td>
+          <td>True</td>
+        </tr>
+        <tr>
+          <td><a href="current_route/004">004</a></td>
+          <td>Moscow</td>
+          <td>Vladimir</td>
+          <td>2023-05-14</td>
+          <td>A777MP</td>
+          <td>False</td>
+        </tr>
+        <tr>
+          <td><a href="current_route/005">005</a></td>
+          <td>Moscow</td>
+          <td>Yaroslavl</td>
+          <td>2023-05-13</td>
+          <td>E001KX</td>
+          <td>False</td>
+        </tr>
+          <tr>
+          <td><a href="current_route/006">006</a></td>
+          <td>SPB</td>
+          <td>Saratov</td>
+          <td>2023-05-8</td>
+          <td>A123MO</td>
+          <td>True</td>
+        </tr>
+        </tr>
+          <tr>
+          <td><a href="current_route/003">003</a></td>
+          <td>SPB</td>
+          <td>Saratov</td>
+          <td>2023-05-8</td>
+          <td>A123MO</td>
+          <td>True</td>
+        </tr>
+        <tr>
+          <td><a href="current_route/004">004</a></td>
+          <td>Moscow</td>
+          <td>Vladimir</td>
+          <td>2023-05-14</td>
+          <td>A777MP</td>
+          <td>False</td>
+        </tr>
+        <tr>
+          <td><a href="current_route/005">005</a></td>
+          <td>Moscow</td>
+          <td>Yaroslavl</td>
+          <td>2023-05-13</td>
+          <td>E001KX</td>
+          <td>False</td>
+        </tr>
+          <tr>
+          <td><a href="current_route/006">006</a></td>
+          <td>SPB</td>
+          <td>Saratov</td>
+          <td>2023-05-8</td>
+          <td>A123MO</td>
+          <td>True</td>
+          </tr>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
